@@ -4,7 +4,7 @@ import constants
 from data.StartingDataset import StartingDataset
 from networks.StartingNetwork import StartingNetwork
 from train_functions.starting_train import starting_train
-
+import torch
 
 def main():
     # Get command line arguments
