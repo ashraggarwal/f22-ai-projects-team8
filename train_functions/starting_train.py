@@ -30,7 +30,7 @@ def starting_train(train_dataset, val_dataset, model, hyperparameters, n_eval):
     writer = SummaryWriter()
 
     # Initalize optimizer (for gradient descent) and loss function
-    optimizer = optim.Adam(model.parameters())
+    optimizer = optim.Adam(model.parameters(),lr=0.001)
     loss_fn = nn.CrossEntropyLoss()
     
     model.train()

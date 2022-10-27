@@ -20,7 +20,7 @@ class StartingDataset(torch.utils.data.Dataset):
         self.labels = self.df.target.tolist() # list of labels
         self.token2idx = self.vectorizer.vocabulary_ # dictionary converting words to their counts
         self.idx2token = {idx: token for token, idx in self.token2idx.items()} # same dictionary backwards
-
+        #print(self.sequences[0]) #if you don't use toarray it'll look weird probably because the object returned by fit_transform doesn't have well defined behavior for print
     def __getitem__(self, i):
         '''
         i (int): the desired instance of the dataset
