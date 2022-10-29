@@ -20,6 +20,6 @@ class StartingNetwork(torch.nn.Module):
         '''
         x = nn.functional.relu(self.fc1(x.squeeze(1).float()))
         x = nn.functional.relu(self.fc2(x))
-        return self.sigmoid(self.fc3(x))
+        return self.fc3(x)
 
 

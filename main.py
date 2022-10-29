@@ -20,11 +20,8 @@ def main():
     data_path = "train.csv" #TODO: make sure you have train.csv downloaded in your project! this assumes it is in the project's root directory (ie the same directory as main) but you can change this as you please
     train_dataset = StartingDataset(data_path)
     val_dataset = StartingDataset(data_path)
-    try:
-        model = StartingNetwork(len(train_dataset.token2idx))
-    except:
-        print("EMPTY DATASET")
-        return
+    model = StartingNetwork(len(train_dataset.token2idx))
+    print(model)
     starting_train(
         train_dataset=train_dataset,
         val_dataset=val_dataset,
