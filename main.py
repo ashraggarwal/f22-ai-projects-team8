@@ -29,6 +29,7 @@ def main():
         hyperparameters=hyperparameters,
         n_eval=constants.N_EVAL,
     )
+    print(model.evaluate())
 
 
 if __name__ == "__main__":
