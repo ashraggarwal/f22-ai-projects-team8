@@ -11,7 +11,7 @@ class StartingNetwork(torch.nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(dimension, 100) # What could that number mean!?!?!? Ask an officer to find out :)
         self.fc2 = nn.Linear(100, 50)
-        self.fc3 = nn.Linear(50,1)
+        self.fc3 = nn.Linear(50,2)
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
